@@ -23,9 +23,20 @@ h4,button{
 }
 h1{
     font-family: "Lobster", sans-serif;
+    z-index: 5;
+    position: relative;
 }
 button{
     background-color: white;
+    height: 50px;
+    padding: 0 20px;
+border: none;
+border-radius: 10px;
+border: 1px solid transparent;
+transition: 0.5s;
+}
+button:hover{
+    border: 1px solid #444;
 }
 @keyframes circle{
     0%{
