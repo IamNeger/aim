@@ -10,7 +10,7 @@ speed.onclick = function (event) {
     createCircle()
     let timeInterval=setInterval(() => {
         console.log(1);
-        time=time-10
+        time=time-1
         if (time<1) {
         clearInterval(timeInterval)
         modal.style.opacity=1    
