@@ -11,19 +11,27 @@ let speed = document.getElementById("speed")
 let modal = document.getElementById("modal")
 let ammo = 10
 reacshin.onclick = function (event) {
+    ammo = 10
+    score = 9999999999999999999999999999999999999999999999999999999
     event.preventDefault()
+    timer.innerHTML = "время: " + 0
+    tablo.innerHTML = "счет: " + 0
     modal.style.opacity = 0
     bigdiv = document.createElement("div")
     document.body.appendChild(bigdiv)
     bigdiv.classList.add("bigdiv")
     reaction()
     bigdiv.onclick = function (event) {
+        if (score > time) {
+            score = time
+            tablo.innerHTML = "счет: " + score
+        }
         ammo = ammo - 1
         if (ammo == 0) {
+            clearTimeout(reactionTimeout)
             modal.style.opacity = 1
             bigdiv.remove()
-            canplay=false
-            
+            canplay = false
         }
         event.preventDefault()
         bigdiv.style.backgroundColor = "white"
