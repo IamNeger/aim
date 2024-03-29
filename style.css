@@ -1,3 +1,18 @@
+input{
+    z-index: 999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999;
+    position: relative;
+    border: none;
+    height: 30px;
+    border-radius: 10000000000px;
+    padding: 0 20px;
+    transition: 0.3s;
+    outline: 2px solid transparent;
+    font-family: "Comfortaa", sans-serif;
+    background: white;
+}
+input:focus{
+    outline: 2px solid gold;
+}
 .bigdiv{
 border: 1px solid #603c3c7f;
 height: 300px;
@@ -35,6 +50,7 @@ h1{
     font-family: "Lobster", sans-serif;
     z-index: 5;
     position: relative;
+    pointer-events: none;
 }
 button{
     background-color: white;

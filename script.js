@@ -1,3 +1,4 @@
+let putin = document.getElementById("putin")
 let canplay = false
 let reactionTimeout
 let miliInterval
@@ -63,17 +64,19 @@ speed.onclick = function (event) {
     event.preventDefault()
     modal.style.opacity = 0
     modal.style.pointerEvents = "none"
-    time = 60
+    time = putin.value || 60
+    putin.style.display="none"
     score = 0
     tablo.innerHTML = "счет: " + score
     createCircle()
     let timeInterval = setInterval(() => {
         console.log(1);
-        time = time - 10
+        time = time - 1
         if (time < 1) {
             clearInterval(timeInterval)
             modal.style.opacity = 1
             modal.style.pointerEvents = "auto"
+            putin.style.display="block"
         }
         timer.innerHTML = "время: " + time
     }, 1000);
